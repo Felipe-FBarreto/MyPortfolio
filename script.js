@@ -8,9 +8,11 @@ function scrollToSection(event){
   event.preventDefault();
   const href = event.currentTarget.getAttribute('href');
   const section = document.querySelector(href)
-  section.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
+  const position = section.getBoundingClientRect().top + window.pageYOffset
+  window.scrollTo({
+    top: position - 70,
+    behavior: "smooth",
   })
-}
+  }
+
 
