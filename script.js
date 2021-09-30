@@ -8,7 +8,7 @@ function scrollToSection(event){
   event.preventDefault();
   const href = event.currentTarget.getAttribute('href');
   const section = document.querySelector(href)
-  const position = section.getBoundingClientRect().top + window.pageYOffset
+  const position = section.offsetTop
   window.scrollTo({
     top: position - 70,
     behavior: "smooth",
