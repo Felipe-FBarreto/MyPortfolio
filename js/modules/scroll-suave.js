@@ -14,7 +14,3 @@ function scrollToSection(event){
     behavior: "smooth",
   })
   }
-
-  
-
-
