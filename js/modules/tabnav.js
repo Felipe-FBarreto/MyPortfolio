@@ -3,8 +3,9 @@ export default function initTabNav(){
   const tabContent = document.querySelectorAll('[data-tab="content"] div')
   tabContent[0].classList.add('active');
   tabMenu[0].classList.add('active');
-  
 
+  if (tabMenu.length && tabContent.length) {
+    
 function activeTab(index){
     tabContent.forEach(div =>{
       div.classList.remove('active')
@@ -25,4 +26,6 @@ function activeTab(index){
       })
   })
 }
+}
+
   
